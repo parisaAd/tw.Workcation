@@ -2,7 +2,18 @@
 module.exports = {
     content: ["./public/**/*.html"],
     theme: {
-      extend: {},
+   
+      extend: {
+        colors:{
+          "navy":{
+            100: "#A3BFFA",
+            200: "#718096",
+            300: "#4A5568",
+            400: "#2D3748",
+            500: "#1A202C"
+          },
+        },
+      },
     },
     plugins: [],
   }
