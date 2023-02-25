@@ -16,7 +16,7 @@
         <!-- close menu -->
         <div class="bg-navy-500">
             <div
-                class="  flex justify-between items-center font-bold text-navy-100 py-3 px-4 container mx-auto 2xl:max-w-screen-2xl">
+                class="flex justify-between items-center font-bold text-navy-100 py-3 px-4 container mx-auto 2xl:max-w-screen-2xl">
                 <div class="flex items-center">
                     <div class="">
                         <svg xmlns="http://www.w3.org/2000/svg" width="45" height="30" fill="none">
@@ -33,13 +33,34 @@
                     <div class="w-5 h-0.5 bg-navy-50 rounded" :class="isOpen ? '-rotate-45  translate-y-1' : ''"></div>
                     <div class="w-5 h-0.5 bg-navy-50 rounded" :class="isOpen ? '-translate-x-5 opacity-0' : ''"></div>
                     <div class="w-5 h-0.5 bg-navy-50 rounded" :class="isOpen ? 'rotate-45  -translate-y-2' : ''"></div>
-                    </butto>
-                    <!-- screen size md upper -->
+                </button>
+                <!-- screen size md upper -->
+                <div class="hidden md:block">
+                    <div class="hidden md:flex items-center">
+                        <div class="flex text-white gap-x-6 text-base">
+                            <a href="#">List your property</a>
+                            <a href="#">Trips</a>
+                            <a href="#">Messages</a>
+                        </div>
+                        <button x-data="{accOpen : false}"
+                            class="w-10 h-10  ml-6 relative inset-0 mr-4 hidden md:block">
+                            <img @click="accOpen =! accOpen" :class="accOpen ? 'ring-2 ring-navy-200' : ''"
+                                src="/assets/images/image.png" class="rounded-full" alt="profile picture">
+                            <div x-show="accOpen" class="bg-white text-navy-500 font-normal flex flex-col text-left absolute w-52
+                                 rounded-lg top-14 right-0 shadow-md overflow-hidden">
+                                <a href="#" class="py-2 pl-4 hover:bg-[#667EEA] hover:text-white w-full">Account
+                                    Setting</a>
+                                <a href="#" class="py-2 pl-4 hover:bg-[#667EEA] hover:text-white w-full">Support</a>
+                                <a href="#" class="py-2 pl-4 hover:bg-[#667EEA] hover:text-white w-full">Sing out</a>
+                            </div>
+                        </button>
 
+                    </div>
+                </div>
             </div>
         </div>
         <!-- open menu -->
-        <div x-show="isOpen" class="bg-navy-500 text-white">
+        <div x-show="isOpen" class="bg-navy-500 text-white md:hidden">
             <div class="flex flex-col gap-y-3 py-6 px-5">
                 <a href="#">List your property</a>
                 <a href="#">Trips</a>
@@ -59,7 +80,6 @@
                 </div>
             </div>
         </div>
-
     </nav>
     <!-- search and filter section -->
     <section class="bg-navy-400">
@@ -72,13 +92,10 @@
                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                                 d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
                         </svg>
-
                     </span>
-
                     <input type="text"
                         class="bg-transparent text-navy-50 w-full text-sm border-none focus:outline-none focus:ring-0"
                         placeholder="Search by keywords">
-
                 </form>
             </div>
             <button class="flex items-center bg-navy-200 rounded-lg px-3 py-1.5 ml-4">
@@ -102,7 +119,7 @@
             <div class="mb-20">
                 <div class="w-full rounded-lg  relative">
                     <img src="/assets/images/house-1.png" alt="home city center" class="rounded-lg">
-                    <div class="bg-white p-4 rounded-lg absolute inset-x-0 shadow-xl w-5/6  mx-auto -mt-16">
+                    <div class="bg-white p-4 rounded-lg absolute inset-x-0 shadow-xl w-5/6 mx-auto -mt-16">
                         <div>
                             <span class="bg-cyan-200 px-2 rounded-2xl font-medium text-xs text-teal-900">PLUS</span>
                             <span class="text-navy-200 text-xs">3 BEDS &bull; 2 BATHS</span>
@@ -144,7 +161,7 @@
             <div class="mb-20">
                 <div class="w-full rounded-lg  relative">
                     <img src="/assets/images/house-2.png" alt="home city center" class="rounded-lg">
-                    <div class="bg-white p-4 rounded-lg absolute inset-x-0 shadow-xl w-5/6  mx-auto -mt-16">
+                    <div class="bg-white p-4 rounded-lg absolute inset-x-0 shadow-xl w-5/6 mx-auto -mt-16">
                         <div>
 
                             <span class="text-navy-200 text-xs">4 BEDS &bull; 2 BATHS</span>
