@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter</title>
+    <link rel="stylesheet" href="./build/tailwind.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+
+<body>
+    <!-- filters section -->
+    <div class="bg-navy-400 lg:grid lg:grid-cols-5 xl:grid-cols-1 ">
+        <!-- select option product -->
+        <div class=" border-t border-t-navy-500 lg:border-t-0 lg:border-r lg:border-r-navy-500 lg:col-span-2 ">
+            <form action="#"
+                class="grid grid-cols-2 gap-x-5 gap-y-8 p-5 sm:flex lg:grid lg:grid-cols-2 lg:gap-x-5 lg:gap-y-8 xl:grid-cols-2 ">
+                <div class="col-span-1 flex flex-col gap-y-1 sm:w-40 lg:w-auto">
+                    <label class="text-navy-50 font-medium" for="bedroom">Bedrooms</label>
+                    <select class="bg-navy-300 rounded-lg border-none focus:outline-none focus:ring-0 text-white w-full"
+                        name="bedroom" id="bedroom">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+                <div class="col-span-1 flex flex-col gap-y-1 sm:w-40 lg:w-auto">
+                    <label class="text-navy-50 font-medium" for="bathroom">Bathrooms</label>
+                    <select
+                        class="bg-navy-300 rounded-lg border-none focus:outline-none focus:ring-0 text-white w-full accent-white"
+                        name="bathroom" id="bathroom">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                </div>
+                <div class="col-span-2 flex flex-col gap-y-1 sm:flex-auto">
+                    <label class="text-navy-50 font-medium" for="price">Price Range</label>
+                    <select
+                        class="bg-navy-300 rounded-lg border-none focus:outline-none focus:ring-0 text-white w-full accent-white"
+                        name="price" id="price">
+                        <option value="1">Up to $1,000 /wk</option>
+                        <option value="2">Up to $2,000 /wk</option>
+                        <option value="3">Up to $3,000 /wk</option>
+                        <option value="4">Up to $4,000 /wk</option>
+                    </select>
+                </div>
+            </form>
+        </div>
+        <!-- property type -->
+        <div class=" border-t border-t-navy-500 lg:col-span-1">
+            <div class="p-5">
+                <p class="text-navy-50 font-medium">Property Type</p>
+                <form action="#" name="property-type"
+                    class="text-white flex flex-col gap-y-4 mt-4 sm:grid sm:grid-cols-4 sm:max-w-3xl lg:flex lg:flex-col">
+                    <div class="flex items-center">
+                        <input
+                            class="form-radio w-5 h-5 bg-navy-500 border-none checked:ring-0 checked:ring-offset-0 checked:text-navy-600 "
+                            type="radio" name="property-type" id="house">
+                        <label class="ml-2 w-full" for="house">House</label>
+                    </div>
+                    <div class="flex items-center">
+                        <input
+                            class="form-radio w-5 h-5 bg-navy-500 border-none checked:ring-0 checked:ring-offset-0 checked:text-navy-600 "
+                            type="radio" name="property-type" id="apartment">
+                        <label class="ml-2 w-full" for="apartment">Apartment</label>
+                    </div>
+                    <div class="flex items-center">
+                        <input
+                            class="form-radio w-5 h-5 bg-navy-500 border-none checked:ring-0 checked:ring-offset-0 checked:text-navy-600 "
+                            type="radio" name="property-type" id="loft">
+                        <label class="ml-2 w-full" for="loft">Loft</label>
+                    </div>
+                    <div class="flex items-center">
+                        <input
+                            class="form-radio w-5 h-5 bg-navy-500 border-none checked:ring-0 checked:ring-offset-0 checked:text-navy-600 "
+                            type="radio" name="property-type" id="townhouse">
+                        <label class="ml-2 w-full" for="townhouse">Townhouse</label>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- Amenities -->
+        <div class=" border-t border-t-navy-500 lg:col-span-2">
+            <div class="p-5">
+                <p class="text-navy-50 font-medium">Amenities</p>
+                <form action="#" name="property-type"
+                    class="text-white flex flex-col gap-y-4 mt-4 sm:grid sm:grid-cols-4 sm:gap-y-8 sm:max-w-3xl lg:grid lg:grid-cols-2 lg:gap-y-4 xl:grid-cols-1">
+                    <div class="flex items-center">
+                        <input class="form-checkbox rounded-md w-5 h-5 bg-navy-500 border-none checked:ring-0 checked:ring-offset-0
+                             checked:text-navy-600 focus:ring-0 focus:ring-offset-0 " type="checkbox" name="balcony"
+                            id="balcony">
+                        <label class="ml-2 w-full" for="balcony">Balcony</label>
+                    </div>
+                    <div class="flex items-center">
+                        <input class="form-checkbox rounded-md w-5 h-5 bg-navy-500 border-none checked:ring-0 checked:ring-offset-0
+                             checked:text-navy-600 focus:ring-0 focus:ring-offset-0 " type="checkbox" name="air"
+                            id="air">
+                        <label class="ml-2 w-full" for="air">Air conditioning</label>
+                    </div>
+                    <div class="flex items-center">
+                        <input class="form-checkbox rounded-md w-5 h-5 bg-navy-500 border-none checked:ring-0 checked:ring-offset-0
+                             checked:text-navy-600 focus:ring-0 focus:ring-offset-0 " type="checkbox" name="pool"
+                            id="pool">
+                        <label class="ml-2 w-full" for="pool">Pool</label>
+                    </div>
+                    <div class="flex items-center">
+                        <input class="form-checkbox rounded-md w-5 h-5 bg-navy-500 border-none checked:ring-0 checked:ring-offset-0
+                             checked:text-navy-600 focus:ring-0 focus:ring-offset-0 " type="checkbox" name="beach"
+                            id="beach">
+                        <label class="ml-2 w-full" for="beach">Beach</label>
+                    </div>
+                    <div class="flex items-center">
+                        <input class="form-checkbox rounded-md w-5 h-5 bg-navy-500 border-none checked:ring-0 checked:ring-offset-0
+                             checked:text-navy-600 focus:ring-0 focus:ring-offset-0 " type="checkbox" name="pet"
+                            id="pet">
+                        <label class="ml-2 w-full" for="pet">Pet friendly</label>
+                    </div>
+                    <div class="flex items-center">
+                        <input class="form-checkbox rounded-md w-5 h-5 bg-navy-500 border-none checked:ring-0 checked:ring-offset-0
+                             checked:text-navy-600 focus:ring-0 focus:ring-offset-0 " type="checkbox" name="kid"
+                            id="kid">
+                        <label class="ml-2 w-full" for="kid">Kid friendly</label>
+                    </div>
+                    <div class="flex items-center">
+                        <input class="form-checkbox rounded-md w-5 h-5 bg-navy-500 border-none checked:ring-0 checked:ring-offset-0
+                             checked:text-navy-600 focus:ring-0 focus:ring-offset-0 " type="checkbox" name="parking"
+                            id="parking">
+                        <label class="ml-2 w-full" for="parking">Parking</label>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+    <!-- submit button -->
+    <div class="bg-navy-500 p-4">
+        <button class="bg-navy-600 w-full rounded-lg font-medium text-white py-2 sm:w-auto sm:px-5 xl:w-full">
+            Update results
+        </button>
+    </div>
+</body>
+
+</html>
